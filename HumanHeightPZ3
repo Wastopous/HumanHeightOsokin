@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HumanPZ3
+{
+    internal class Human
+    {
+        private int _head;
+        private int _headpoint;
+        private static int _headrad;
+        private int _torso;
+        private int _torsopoint1;
+        private int _torsopoint2;
+        private static int _torsoheight;
+        private int _torsowidth;
+        private int _hands;
+        private int _handcorner;
+        private int _handheight;
+        private int _legs;
+        private int _legcorner;
+        private static int _legheight;
+
+        public static int Head
+        {
+            get { return _headrad; }
+            set { _headrad = Convert.ToInt32(Console.ReadLine()); }
+        }
+        public static int Torso
+        {
+            get { return _torsoheight; }
+            set { _torsoheight = Convert.ToInt32(Console.ReadLine()); }
+        }
+        public static int Leg
+        {
+            get { return _legheight; }
+            set { _legheight = Convert.ToInt32(Console.ReadLine()); }
+        }
+        static void Main(string[] args)
+        {
+            int rost;
+            int x = Human._headrad;
+            int z = Human._torsoheight;
+            int y = Human._legheight;
+            Console.WriteLine("Введите радиус головы человека:");
+            x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите длину туловища человека:");
+            y = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите длину ног человека:");
+            z = Convert.ToInt32(Console.ReadLine());
+            rost = 2 * x + y + z;
+            Console.WriteLine("Рост человека:" + " " + rost);
+            Console.ReadKey();
+        }
+    }
+}
